@@ -1,0 +1,63 @@
+doctype html
+html
+    head 
+        meta(charset="UTF-8" )
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='/css/style.css')
+        link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+        title Natours | #{title}
+
+    body 
+        // HEADER
+        include _header 
+
+        // Content
+        block content
+            h1 This is a placeholder heading
+        main.main
+        .create-form
+            h2.heading-secondary.ma-bt-lg Add A New Tour
+            form.form.form--create
+                .left-form
+                    .form__group
+                        label.form__label(for='name') Name of the Tour
+                        input#name.form__input(type='text', placeholder='', required)
+                    .form__group.ma-bt-md
+                        label.form__label(for='duration') Duration
+                        input#duration.form__input(type='text', placeholder='', required)
+                    .form__group.ma-bt-md
+                        label.form__label(for='maxGroupSize') Max Group Size
+                        input#maxGroupSize.form__input(type='text', placeholder='', required)
+                    .form__group.ma-bt-md
+                        label.form__label(for='difficulty') difficulty
+                        input#difficulty.form__input(type='text', placeholder='', required)
+                .right-form
+                    .form__group.ma-bt-md
+                        label.form__label(for='price') price
+                        input#price.form__input(type='text', placeholder='', required)
+                    .form__group.ma-bt-md
+                        label.form__label(for='ratingsAverage') ratingsAverage
+                        input#ratingsAverage.form__input(type='text', placeholder='', required)
+                    .form__group.ma-bt-md
+                        label.form__label(for='summary') summary
+                        input#summary.form__input(type='text', placeholder='', required)
+                    //- .form__group.ma-bt-md
+                    //-     label.form__label(for='imageCover') imageCover
+                    //-     input#imageCover.form__input(type='text', placeholder='', required)
+                    .form__group
+                        button.btn.btn--green Add Tour
+        // Footer
+        include _footer 
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js')
+        script(src='/js/login.js')
+        script(src='/js/logout.js')
+        script(src='/js/signup.js')
+        script(src='/js/updateSettings.js')
+        script(src='/js/review.js')
+        script(src='/js/addTour.js')
+        script(src='/js/deleteTour.js')
+
+        //- script(src ='/js/bundle.js')
+        
