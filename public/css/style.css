@@ -85,7 +85,9 @@ body {
   height: 1px;
   background-color: #e0e0e0;
 }
-
+.hack{
+  color:#444 !important
+}
 .alert {
   position: fixed;
   top: 0;

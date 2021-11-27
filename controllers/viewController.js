@@ -62,6 +62,11 @@ exports.getAccount = async (req, res) => {
     tittle: 'Your account'
   });
 };
+exports.getHack = async (req, res) => {
+  res.status(200).render('hack', {
+    tittle: 'Your hack'
+  });
+};
 
 exports.updateUserData = catchAsync(async (req, res, next) => {
   const updatedUser = await User.findByIdAndUpdate(
